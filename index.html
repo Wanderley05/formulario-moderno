@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro Inteligente</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Cadastro de Usuário</h2>
+
+<form id="cadastroForm" novalidate>
+
+<div class="form-group">
+<label for="nome">Nome Completo *</label>
+<input
+type="text"
+id="nome"
+name="nome"
+placeholder="Digite seu nome"
+required
+minlength="3"
+autocomplete="name"
+>
+<span class="error-msg" id="nome-error"></span>
+</div>
+
+
+<div class="form-group">
+<label for="email">E-mail *</label>
+<input
+type="email"
+id="email"
+name="email"
+required
+autocomplete="email"
+>
+<span class="error-msg" id="email-error"></span>
+</div>
+
+
+<div class="form-group">
+<label for="senha">Senha *</label>
+<input
+type="password"
+id="senha"
+name="senha"
+required
+minlength="8"
+>
+<span class="error-msg" id="senha-error"></span>
+
+<div class="password-strength">
+<div id="strength-bar"></div>
+</div>
+
+</div>
+
+
+<div class="form-group">
+<label for="confirmarSenha">Confirmar Senha *</label>
+<input
+type="password"
+id="confirmarSenha"
+name="confirmarSenha"
+required
+>
+<span class="error-msg" id="confirmarSenha-error"></span>
+</div>
+
+
+<button type="submit" id="btnEnviar">
+
+<span id="btn-text">Criar Conta</span>
+
+<span class="spinner" id="spinner"></span>
+
+</button>
+
+</form>
+
+<div id="mensagem-sucesso"></div>
+
+</div>
+
+<script src="js/validation.js"></script>
+
+</body>
+</html>
